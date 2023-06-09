@@ -1,17 +1,56 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+// class Comparison
+//	main ()
+//		num firstNum = 0
+//		num secondNum = 0
+//		output “Please input a number.”
+//		input firstNum
+//		output “Please input a second number.”
+//		input secondNum
+//		if firstNum != secondNum
+//			if firstNum > secNum then
+//				output secNum + “is the smallest number.”
+//			else
+//				output firstNum + “is the smallest number.”
+//			endIf
+//		else
+//			output “Your numbers are equal.”
+//		endIf
+//	return
+//end class
+import java.util.Scanner;
 public class Main {
-    public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+    public static void main(String[] args)
+    {
+        //Declaring my variables//
+        Scanner in = new Scanner(System.in);
+        int firstNum = 0;
+        int secNum = 0;
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        //Asking the users to input the first number and storing it in the correct variable.//
+        System.out.printf("Please enter the first number.");
+        firstNum = in.nextInt();
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+        //Asking the user to input the second number and storing it in the correct variable.//
+        System.out.printf("Please enter the second number.");
+        secNum = in.nextInt();
+
+        //Comparing the two numbers and outputting which one is the smallest//
+        if(firstNum != secNum)
+        {
+            if(firstNum>secNum)
+            {
+                System.out.printf(secNum + " is the smaller number.");
+            }
+            else
+            {
+                System.out.printf(firstNum + " is the smaller number.");
+            }
+
+        }
+        //Letting the user know that the numbers are equal if they are the same.//
+        else
+        {
+            System.out.printf("The numbers are equal.");
         }
     }
 }
